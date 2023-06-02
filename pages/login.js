@@ -1,14 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
-import IdentityLayout from "./layout/identity-layout";
+import IdentityLayout from "components/layout/IdentityLayout";
 import styles from 'styles/Form.module.css';
-import { useSession, signIn, getSession } from 'next-auth/react';
+import { signIn} from 'next-auth/react';
 import { HiAtSymbol, HiFingerPrint } from 'react-icons/hi';
 import { useFormik } from 'formik';
 import { useState } from "react";
 import loginValidate from 'lib/validate-form';
 import { useRouter } from "next/router";
-import { ToastContainer, toast } from 'react-toast'
+import { ToastContainer, toast } from 'react-toastify'
 import { authOptions } from 'pages/api/auth/[...nextauth]'
 import { getServerSession } from "next-auth/next"
 

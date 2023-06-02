@@ -1,28 +1,14 @@
 import { useQuery, gql } from '@apollo/client';
-
-const ALL_CARDS = gql`
-{
-  allCards{
-    data{
-      code
-      elixirCost
-      rarity
-      type
-      isWinCondition
-    }
-  }
-}
-`;
+import appConfig from 'config/app.json'
 
 const Test = () => {
-  const { loading, error, data } = useQuery(ALL_CARDS);
-
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error : {error.message}</p>;
-  const cards = data.allCards.data;
+  const shortcuts = appConfig.cards.map(card => {
+    const shortcut = card.shortcuts[0]
+    return shortcut !== card.code ? shortcut : card.code
+  })
 
   return (
-    cards.map((c) => <div>{c.code}</div>)
+    shortcuts.map((shortcut) => <div>{shortcut}</div>)
   )
 } 
 

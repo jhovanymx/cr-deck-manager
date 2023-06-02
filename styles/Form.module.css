@@ -1,5 +1,5 @@
 .input_group {
-  @apply flex border rounded-xl;
+  @apply flex border rounded-xl h-fit;
   position: relative;
 }
 
@@ -7,7 +7,6 @@
   @apply w-full py-4 px-6 rounded-xl bg-slate-50;
   @apply focus:outline-none border-none;
   position: relative;
-
 }
 
 .input_text + * {

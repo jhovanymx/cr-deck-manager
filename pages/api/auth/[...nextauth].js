@@ -16,3 +16,4 @@ export const authOptions = {
   ]
 }
 export default NextAuth(authOptions)
+//api/auth/signout

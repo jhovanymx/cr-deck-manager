@@ -1,0 +1,4 @@
+.button {
+  @apply flex border rounded-xl;
+  position: relative;
+}

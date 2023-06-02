@@ -16,7 +16,12 @@ export default async function handler(req, res) {
       return res.status(422).json({message: "User Already Exists"})
     }
 
-    const newUser = new User({email, password: await hash(password, 12)})
+    const newUser = new User({
+      name: email,
+      email,
+      password: await hash(password, 12),
+      image: ""
+    })
     try {
       const data = await newUser.save()
       res.status(201).json({status: true, user: data})

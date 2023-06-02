@@ -1,14 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
-import IdentityLayout from "./layout/identity-layout";
+import IdentityLayout from "components/layout/IdentityLayout";
 import styles from 'styles/Form.module.css';
 import { HiAtSymbol, HiFingerPrint } from 'react-icons/hi';
 import { useState } from "react";
 import { useFormik } from 'formik';
 import { useRouter } from "next/router";
 import { registerValidate } from 'lib/validate-form';
-import { ToastContainer, toast } from 'react-toast'
-import { resultKeyNameFromField } from "@apollo/client/utilities";
+import { ToastContainer, toast } from 'react-toastify'
 
 export default function Register() {
   const [showPassword, setShowPassword] = useState(false)

@@ -27,7 +27,6 @@ Elite Barbarians
 Elixir Collector
 Elixir Golem
 Executioner
-Fenix
 Fire Spirit
 Fireball
 Firecracker
@@ -76,6 +75,7 @@ Mother Witch
 Musketeer
 Night Witch
 P.E.K.K.A.
+Phoenix
 Poison
 Prince
 Princess

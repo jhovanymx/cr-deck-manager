@@ -48,21 +48,22 @@ export default function Tools() {
       elixirCost, 
       type, 
       rarity, 
-      isWinCondition
-    ] = notation.split(",");
+      isWinCondition,
+      shortcuts
+    ] = notation.split(" ");
 
     return {
       code,
-      elixirCost,
+      elixirCost: Number(elixirCost),
       type: typesMap[type],
       rarity: raritiesMap[rarity],
-      isWinCondition: Boolean(isWinCondition)
+      isWinCondition: isWinCondition === "true",
+      shortcuts: [shortcuts]
     };
   }
 
   return (
     <>
-      {session && <pre>{JSON.stringify(session.user)}</pre>}
       <select onChange={optionChange}>
         <option value="1" defaultValue="1">Cards Info</option>
         <option value="2">Cards Translation</option>

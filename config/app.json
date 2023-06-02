@@ -1,0 +1,872 @@
+{
+  "cards": [
+    {
+        "code": "AQ",
+        "elixirCost": 4,
+        "type": "troop",
+        "rarity": "champion",
+        "isWinCondition": false,
+        "shortcuts": ["RA"]
+    },
+    {
+        "code": "A",
+        "elixirCost": 3,
+        "type": "troop",
+        "rarity": "common",
+        "isWinCondition": false,
+        "shortcuts": []
+    },
+    {
+        "code": "AR",
+        "elixirCost": 3,
+        "type": "spell",
+        "rarity": "common",
+        "isWinCondition": false,
+        "shortcuts": []
+    },
+    {
+      "code": "BD",
+      "elixirCost": 4,
+      "type": "troop",
+      "rarity": "epic",
+      "isWinCondition": false,
+      "shortcuts": ["BDR"]
+    },
+    {
+      "code": "B",
+      "elixirCost": 5,
+      "type": "troop",
+      "rarity": "epic",
+      "isWinCondition": true,
+      "shortcuts": ["GL"]
+    },
+    {
+      "code": "BA",
+      "elixirCost": 3,
+      "type": "troop",
+      "rarity": "legendary",
+      "isWinCondition": false,
+      "shortcuts": ["BAN"]
+    },
+    {
+      "code": "BB",
+      "elixirCost": 2,
+      "type": "spell",
+      "rarity": "epic",
+      "isWinCondition": false,
+      "shortcuts": []
+    },
+    {
+      "code": "BH",
+      "elixirCost": 6,
+      "type": "building",
+      "rarity": "rare",
+      "isWinCondition": false,
+      "shortcuts": ["CB"]
+    },
+    {
+      "code": "BAR",
+      "elixirCost": 5,
+      "type": "troop",
+      "rarity": "common",
+      "isWinCondition": false,
+      "shortcuts": ["BA"]
+    },
+    {
+      "code": "BAT",
+      "elixirCost": 2,
+      "type": "troop",
+      "rarity": "common",
+      "isWinCondition": false,
+      "shortcuts": ["MU"]
+    },
+    {
+      "code": "BAH",
+      "elixirCost": 4,
+      "type": "troop",
+      "rarity": "rare",
+      "isWinCondition": false,
+      "shortcuts": ["CG"]
+    },
+    {
+      "code": "BR",
+      "elixirCost": 4,
+      "type": "troop",
+      "rarity": "rare",
+      "isWinCondition": true,
+      "shortcuts": ["AB"]
+    },
+    {
+      "code": "BT",
+      "elixirCost": 4,
+      "type": "building",
+      "rarity": "rare",
+      "isWinCondition": false,
+      "shortcuts": ["TB"]
+    },
+    {
+      "code": "BO",
+      "elixirCost": 2,
+      "type": "troop",
+      "rarity": "common",
+      "isWinCondition": false,
+      "shortcuts": []
+    },
+    {
+      "code": "BOW",
+      "elixirCost": 5,
+      "type": "troop",
+      "rarity": "epic",
+      "isWinCondition": false,
+      "shortcuts": ["LAN"]
+    },
+    {
+      "code": "C",
+      "elixirCost": 3,
+      "type": "building",
+      "rarity": "common",
+      "isWinCondition": false,
+      "shortcuts": []
+    },
+    {
+      "code": "CC",
+      "elixirCost": 5,
+      "type": "troop",
+      "rarity": "epic",
+      "isWinCondition": false,
+      "shortcuts": ["CR"]
+    },
+    {
+      "code": "CL",
+      "elixirCost": 3,
+      "type": "spell",
+      "rarity": "epic",
+      "isWinCondition": false,
+      "shortcuts": []
+    },
+    {
+      "code": "DP",
+      "elixirCost": 4,
+      "type": "troop",
+      "rarity": "epic",
+      "isWinCondition": false,
+      "shortcuts": ["PO"]
+    },
+    {
+      "code": "DG",
+      "elixirCost": 3,
+      "type": "troop",
+      "rarity": "rare",
+      "isWinCondition": false,
+      "shortcuts": ["DLA"]
+    },
+    {
+      "code": "E",
+      "elixirCost": 3,
+      "type": "spell",
+      "rarity": "rare",
+      "isWinCondition": false,
+      "shortcuts": ["TE"]
+    },
+    {
+      "code": "ED",
+      "elixirCost": 5,
+      "type": "troop",
+      "rarity": "epic",
+      "isWinCondition": false,
+      "shortcuts": ["DEL"]
+    },
+    {
+      "code": "EG",
+      "elixirCost": 7,
+      "type": "troop",
+      "rarity": "epic",
+      "isWinCondition": true,
+      "shortcuts": ["GEL"]
+    },
+    {
+      "code": "ES",
+      "elixirCost": 1,
+      "type": "troop",
+      "rarity": "epic",
+      "isWinCondition": false,
+      "shortcuts": ["EEL"]
+    },
+    {
+      "code": "EW",
+      "elixirCost": 4,
+      "type": "troop",
+      "rarity": "epic",
+      "isWinCondition": false,
+      "shortcuts": ["MEL"]
+    },
+    {
+      "code": "EB",
+      "elixirCost": 6,
+      "type": "troop",
+      "rarity": "common",
+      "isWinCondition": false,
+      "shortcuts": ["BE"]
+    },
+    {
+      "code": "EC",
+      "elixirCost": 3,
+      "type": "spell",
+      "rarity": "rare",
+      "isWinCondition": false,
+      "shortcuts": ["RE"]
+    },
+    {
+      "code": "ELG",
+      "elixirCost": 3,
+      "type": "troop",
+      "rarity": "rare",
+      "isWinCondition": false,
+      "shortcuts": ["GE"]
+    },
+    {
+      "code": "EX",
+      "elixirCost": 5,
+      "type": "troop",
+      "rarity": "epic",
+      "isWinCondition": false,
+      "shortcuts": ["VER"]
+    },
+    {
+      "code": "FS",
+      "elixirCost": 1,
+      "type": "troop",
+      "rarity": "common",
+      "isWinCondition": false,
+      "shortcuts": ["EF"]
+    },
+    {
+      "code": "F",
+      "elixirCost": 4,
+      "type": "spell",
+      "rarity": "rare",
+      "isWinCondition": false,
+      "shortcuts": ["BF"]
+    },
+    {
+      "code": "FC",
+      "elixirCost": 3,
+      "type": "troop",
+      "rarity": "common",
+      "isWinCondition": false,
+      "shortcuts": ["LF"]
+    },
+    {
+      "code": "FM",
+      "elixirCost": 3,
+      "type": "troop",
+      "rarity": "legendary",
+      "isWinCondition": false,
+      "shortcuts": ["PES"]
+    },
+    {
+      "code": "FLM",
+      "elixirCost": 4,
+      "type": "troop",
+      "rarity": "rare",
+      "isWinCondition": false,
+      "shortcuts": ["MV"]
+    },
+    {
+      "code": "FR",
+      "elixirCost": 4,
+      "type": "spell",
+      "rarity": "epic",
+      "isWinCondition": false,
+      "shortcuts": ["HI"]
+    },
+    {
+      "code": "FU",
+      "elixirCost": 4,
+      "type": "building",
+      "rarity": "rare",
+      "isWinCondition": false,
+      "shortcuts": ["H"]
+    },
+    {
+      "code": "G",
+      "elixirCost": 5,
+      "type": "troop",
+      "rarity": "rare",
+      "isWinCondition": true,
+      "shortcuts": []
+    },
+    {
+      "code": "GS",
+      "elixirCost": 6,
+      "type": "troop",
+      "rarity": "epic",
+      "isWinCondition": false,
+      "shortcuts": ["EG"]
+    },
+    {
+      "code": "GIS",
+      "elixirCost": 2,
+      "type": "spell",
+      "rarity": "common",
+      "isWinCondition": false,
+      "shortcuts": ["BNI"]
+    },
+    {
+      "code": "GB",
+      "elixirCost": 3,
+      "type": "troop",
+      "rarity": "epic",
+      "isWinCondition": true,
+      "shortcuts": ["BD"]
+    },
+    {
+      "code": "GC",
+      "elixirCost": 4,
+      "type": "building",
+      "rarity": "rare",
+      "isWinCondition": false,
+      "shortcuts": ["JF"]
+    },
+    {
+      "code": "GD",
+      "elixirCost": 4,
+      "type": "building",
+      "rarity": "epic",
+      "isWinCondition": true,
+      "shortcuts": ["ED"]
+    },
+    {
+      "code": "GG",
+      "elixirCost": 3,
+      "type": "troop",
+      "rarity": "common",
+      "isWinCondition": false,
+      "shortcuts": ["PD"]
+    },
+    {
+      "code": "GOG",
+      "elixirCost": 6,
+      "type": "troop",
+      "rarity": "epic",
+      "isWinCondition": true,
+      "shortcuts": ["DG"]
+    },
+    {
+      "code": "GOH",
+      "elixirCost": 5,
+      "type": "building",
+      "rarity": "rare",
+      "isWinCondition": false,
+      "shortcuts": ["CD"]
+    },
+    {
+      "code": "GO",
+      "elixirCost": 2,
+      "type": "troop",
+      "rarity": "common",
+      "isWinCondition": false,
+      "shortcuts": ["D"]
+    },
+    {
+      "code": "GK",
+      "elixirCost": 4,
+      "type": "troop",
+      "rarity": "champion",
+      "isWinCondition": false,
+      "shortcuts": ["CAD"]
+    },
+    {
+      "code": "GOL",
+      "elixirCost": 8,
+      "type": "troop",
+      "rarity": "epic",
+      "isWinCondition": false,
+      "shortcuts": ["GO"]
+    },
+    {
+      "code": "GR",
+      "elixirCost": 5,
+      "type": "spell",
+      "rarity": "legendary",
+      "isWinCondition": true,
+      "shortcuts": ["CE"]
+    },
+    {
+      "code": "GU",
+      "elixirCost": 3,
+      "type": "troop",
+      "rarity": "epic",
+      "isWinCondition": false,
+      "shortcuts": []
+    },
+    {
+      "code": "HS",
+      "elixirCost": 1,
+      "type": "troop",
+      "rarity": "rare",
+      "isWinCondition": false,
+      "shortcuts": ["ESA"]
+    },
+    {
+      "code": "HR",
+      "elixirCost": 4,
+      "type": "troop",
+      "rarity": "rare",
+      "isWinCondition": true,
+      "shortcuts": ["MO"]
+    },
+    {
+      "code": "H",
+      "elixirCost": 4,
+      "type": "troop",
+      "rarity": "epic",
+      "isWinCondition": false,
+      "shortcuts": ["CAZ"]
+    },
+    {
+      "code": "IG",
+      "elixirCost": 2,
+      "type": "troop",
+      "rarity": "rare",
+      "isWinCondition": false,
+      "shortcuts": ["GH"]
+    },
+    {
+      "code": "IS",
+      "elixirCost": 1,
+      "type": "troop",
+      "rarity": "common",
+      "isWinCondition": false,
+      "shortcuts": ["EH"]
+    },
+    {
+      "code": "IW",
+      "elixirCost": 3,
+      "type": "troop",
+      "rarity": "legendary",
+      "isWinCondition": false,
+      "shortcuts": ["MH"]
+    },
+    {
+      "code": "ID",
+      "elixirCost": 4,
+      "type": "troop",
+      "rarity": "rare",
+      "isWinCondition": false,
+      "shortcuts": ["DI"]
+    },
+    {
+      "code": "IT",
+      "elixirCost": 5,
+      "type": "building",
+      "rarity": "rare",
+      "isWinCondition": false,
+      "shortcuts": ["TI"]
+    },
+    {
+      "code": "K",
+      "elixirCost": 3,
+      "type": "troop",
+      "rarity": "common",
+      "isWinCondition": false,
+      "shortcuts": ["CA"]
+    },
+    {
+      "code": "LH",
+      "elixirCost": 7,
+      "type": "troop",
+      "rarity": "legendary",
+      "isWinCondition": true,
+      "shortcuts": ["SL"]
+    },
+    {
+      "code": "L",
+      "elixirCost": 6,
+      "type": "spell",
+      "rarity": "epic",
+      "isWinCondition": false,
+      "shortcuts": ["R"]
+    },
+    {
+      "code": "LJ",
+      "elixirCost": 4,
+      "type": "troop",
+      "rarity": "legendary",
+      "isWinCondition": false,
+      "shortcuts": ["L"]
+    },
+    {
+      "code": "MA",
+      "elixirCost": 4,
+      "type": "troop",
+      "rarity": "legendary",
+      "isWinCondition": false,
+      "shortcuts": ["AM"]
+    },
+    {
+      "code": "MK",
+      "elixirCost": 7,
+      "type": "troop",
+      "rarity": "legendary",
+      "isWinCondition": false,
+      "shortcuts": ["MC"]
+    },
+    {
+      "code": "MM",
+      "elixirCost": 4,
+      "type": "troop",
+      "rarity": "champion",
+      "isWinCondition": false,
+      "shortcuts": ["GM"]
+    },
+    {
+      "code": "M",
+      "elixirCost": 3,
+      "type": "troop",
+      "rarity": "legendary",
+      "isWinCondition": false,
+      "shortcuts": ["MI"]
+    },
+    {
+      "code": "MP",
+      "elixirCost": 4,
+      "type": "troop",
+      "rarity": "rare",
+      "isWinCondition": false,
+      "shortcuts": []
+    },
+    {
+      "code": "MH",
+      "elixirCost": 5,
+      "type": "troop",
+      "rarity": "common",
+      "isWinCondition": false,
+      "shortcuts": ["HE"]
+    },
+    {
+      "code": "MI",
+      "elixirCost": 3,
+      "type": "troop",
+      "rarity": "common",
+      "isWinCondition": false,
+      "shortcuts": ["E"]
+    },
+    {
+      "code": "MIR",
+      "elixirCost": -1,
+      "type": "spell",
+      "rarity": "epic",
+      "isWinCondition": false,
+      "shortcuts": ["ESP"]
+    },
+    {
+      "code": "MO",
+      "elixirCost": 4,
+      "type": "building",
+      "rarity": "common",
+      "isWinCondition": true,
+      "shortcuts": ["MOR"]
+    },
+    {
+      "code": "MON",
+      "elixirCost": 5,
+      "type": "troop",
+      "rarity": "champion",
+      "isWinCondition": false,
+      "shortcuts": []
+    },
+    {
+      "code": "MW",
+      "elixirCost": 4,
+      "type": "troop",
+      "rarity": "legendary",
+      "isWinCondition": false,
+      "shortcuts": ["BM"]
+    },
+    {
+      "code": "MU",
+      "elixirCost": 4,
+      "type": "troop",
+      "rarity": "rare",
+      "isWinCondition": false,
+      "shortcuts": ["MOS"]
+    },
+    {
+      "code": "NW",
+      "elixirCost": 4,
+      "type": "troop",
+      "rarity": "legendary",
+      "isWinCondition": false,
+      "shortcuts": ["BN"]
+    },
+    {
+      "code": "P",
+      "elixirCost": 7,
+      "type": "troop",
+      "rarity": "epic",
+      "isWinCondition": false,
+      "shortcuts": ["PE"]
+    },
+    {
+      "code": "PH",
+      "elixirCost": 4,
+      "type": "troop",
+      "rarity": "legendary",
+      "isWinCondition": false,
+      "shortcuts": ["FE"]
+    },
+    {
+      "code": "PO",
+      "elixirCost": 4,
+      "type": "spell",
+      "rarity": "epic",
+      "isWinCondition": false,
+      "shortcuts": ["VE"]
+    },
+    {
+      "code": "PR",
+      "elixirCost": 5,
+      "type": "troop",
+      "rarity": "epic",
+      "isWinCondition": false,
+      "shortcuts": ["P"]
+    },
+    {
+      "code": "PRI",
+      "elixirCost": 3,
+      "type": "troop",
+      "rarity": "legendary",
+      "isWinCondition": false,
+      "shortcuts": ["PR"]
+    },
+    {
+      "code": "R",
+      "elixirCost": 2,
+      "type": "spell",
+      "rarity": "epic",
+      "isWinCondition": false,
+      "shortcuts": ["FU"]
+    },
+    {
+      "code": "RR",
+      "elixirCost": 5,
+      "type": "troop",
+      "rarity": "legendary",
+      "isWinCondition": true,
+      "shortcuts": ["MCA"]
+    },
+    {
+      "code": "RA",
+      "elixirCost": 5,
+      "type": "troop",
+      "rarity": "common",
+      "isWinCondition": false,
+      "shortcuts": ["PI"]
+    },
+    {
+      "code": "RO",
+      "elixirCost": 6,
+      "type": "spell",
+      "rarity": "epic",
+      "isWinCondition": false,
+      "shortcuts": ["CO"]
+    },
+    {
+      "code": "RD",
+      "elixirCost": 3,
+      "type": "spell",
+      "rarity": "common",
+      "isWinCondition": false,
+      "shortcuts": ["PAR"]
+    },
+    {
+      "code": "RG",
+      "elixirCost": 3,
+      "type": "troop",
+      "rarity": "legendary",
+      "isWinCondition": false,
+      "shortcuts": ["FR"]
+    },
+    {
+      "code": "ROG",
+      "elixirCost": 6,
+      "type": "troop",
+      "rarity": "common",
+      "isWinCondition": true,
+      "shortcuts": ["GN"]
+    },
+    {
+      "code": "RH",
+      "elixirCost": 5,
+      "type": "troop",
+      "rarity": "rare",
+      "isWinCondition": true,
+      "shortcuts": ["PRE"]
+    },
+    {
+      "code": "ROR",
+      "elixirCost": 7,
+      "type": "troop",
+      "rarity": "common",
+      "isWinCondition": false,
+      "shortcuts": ["RR"]
+    },
+    {
+      "code": "SA",
+      "elixirCost": 3,
+      "type": "troop",
+      "rarity": "epic",
+      "isWinCondition": false,
+      "shortcuts": ["EE"]
+    },
+    {
+      "code": "SB",
+      "elixirCost": 3,
+      "type": "spell",
+      "rarity": "common",
+      "isWinCondition": false,
+      "shortcuts": ["BES"]
+    },
+    {
+      "code": "SD",
+      "elixirCost": 4,
+      "type": "troop",
+      "rarity": "common",
+      "isWinCondition": false,
+      "shortcuts": ["DES"]
+    },
+    {
+      "code": "SK",
+      "elixirCost": 4,
+      "type": "troop",
+      "rarity": "champion",
+      "isWinCondition": false,
+      "shortcuts": ["REE"]
+    },
+    {
+      "code": "S",
+      "elixirCost": 1,
+      "type": "troop",
+      "rarity": "common",
+      "isWinCondition": false,
+      "shortcuts": ["ES"]
+    },
+    {
+      "code": "SP",
+      "elixirCost": 6,
+      "type": "troop",
+      "rarity": "legendary",
+      "isWinCondition": true,
+      "shortcuts": ["CH"]
+    },
+    {
+      "code": "SG",
+      "elixirCost": 2,
+      "type": "troop",
+      "rarity": "common",
+      "isWinCondition": false,
+      "shortcuts": ["DL"]
+    },
+    {
+      "code": "T",
+      "elixirCost": 4,
+      "type": "building",
+      "rarity": "common",
+      "isWinCondition": false,
+      "shortcuts": ["TT"]
+    },
+    {
+      "code": "TL",
+      "elixirCost": 2,
+      "type": "spell",
+      "rarity": "legendary",
+      "isWinCondition": false,
+      "shortcuts": ["T"]
+    },
+    {
+      "code": "TM",
+      "elixirCost": 9,
+      "type": "troop",
+      "rarity": "rare",
+      "isWinCondition": false,
+      "shortcuts": []
+    },
+    {
+      "code": "TO",
+      "elixirCost": 3,
+      "type": "building",
+      "rarity": "rare",
+      "isWinCondition": false,
+      "shortcuts": ["LA"]
+    },
+    {
+      "code": "TOR",
+      "elixirCost": 3,
+      "type": "spell",
+      "rarity": "epic",
+      "isWinCondition": false,
+      "shortcuts": ["TO"]
+    },
+    {
+      "code": "V",
+      "elixirCost": 4,
+      "type": "troop",
+      "rarity": "rare",
+      "isWinCondition": false,
+      "shortcuts": []
+    },
+    {
+      "code": "WB",
+      "elixirCost": 2,
+      "type": "spell",
+      "rarity": "epic",
+      "isWinCondition": false,
+      "shortcuts": ["RM"]
+    },
+    {
+      "code": "W",
+      "elixirCost": 5,
+      "type": "troop",
+      "rarity": "epic",
+      "isWinCondition": false,
+      "shortcuts": ["B"]
+    },
+    {
+      "code": "WI",
+      "elixirCost": 5,
+      "type": "troop",
+      "rarity": "rare",
+      "isWinCondition": false,
+      "shortcuts": ["M"]
+    },
+    {
+      "code": "X",
+      "elixirCost": 6,
+      "type": "building",
+      "rarity": "epic",
+      "isWinCondition": false,
+      "shortcuts": ["BAL"]
+    },
+    {
+      "code": "Z",
+      "elixirCost": 2,
+      "type": "spell",
+      "rarity": "common",
+      "isWinCondition": false,
+      "shortcuts": ["DE"]
+    },
+    {
+      "code": "ZA",
+      "elixirCost": 4,
+      "type": "troop",
+      "rarity": "rare",
+      "isWinCondition": false,
+      "shortcuts": ["EL"]
+    }
+  ],
+  "cardSize": {
+    "width": 70,
+    "height": 84
+  }
+}
