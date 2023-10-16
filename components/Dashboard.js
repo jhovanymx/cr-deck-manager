@@ -1,11 +1,9 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { useSelector, useDispatch } from "react-redux"
 import { FaObjectGroup } from 'react-icons/fa'
 import { GrAddCircle } from 'react-icons/gr'
 import { useTranslation } from 'next-i18next'
-import { useDecksByUsername } from 'lib/queries'
-import { convertDecks } from 'lib/converters'
-import { extractFromQuery as extract } from 'services/data-service'
+import { useGetDecksByUsernameQuery } from "api/deck-api"
 import { setDecks } from 'redux/slices/app-slice'
 import Button from 'components/common/Button'
 import DeckDialog from 'components/DeckDialog'
@@ -13,15 +11,19 @@ import GroupsView from 'components/GroupsView'
 import DecksView from 'components/DecksView'
 
 export default function Dashboard () {
+  const { t } = useTranslation()
   const user = useSelector(state => state.user.user)
   const isGroupView = useSelector(state => state.app.isGroupView)
-
   const [isOpenDeckDialog, setIsOpenDeckDialog] = useState(false)
-  
   const dispatch = useDispatch()
-  extract(useDecksByUsername(user.email), data => dispatch(setDecks(convertDecks(data))))
 
-  const { t } = useTranslation()
+  const {data: decksByUsername, isFetching: isDecksFetching } = useGetDecksByUsernameQuery(user.email)
+
+  useEffect(() => {
+    if (decksByUsername && !isDecksFetching) {
+      dispatch(setDecks(decksByUsername))
+    }
+  }, [isDecksFetching])
 
   const onGroupByClick = () => {
 
@@ -38,7 +40,15 @@ export default function Dashboard () {
         <Button icon={<GrAddCircle />} text={t("dashboard.newDeck")} onButtonClick={onNewDeckClick} />
       </div>
       <DeckDialog isOpen={isOpenDeckDialog} setIsOpen={setIsOpenDeckDialog} />
-      {isGroupView ? <GroupsView /> : <DecksView />}
+      {isGroupView ? (
+        isDecksFetching ? (
+          <div>Loading...</div>
+        ) : (
+          <GroupsView />
+        )
+      ) : (
+        <DecksView />
+      )}
     </section>
   )
 }

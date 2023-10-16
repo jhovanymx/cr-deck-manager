@@ -4,9 +4,10 @@ import { setLabels } from 'redux/slices/app-slice'
 import { useDispatch } from 'react-redux'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { authOptions } from 'pages/api/auth/[...nextauth]'
-import { getLabelsByUsername } from 'lib/queries'
+import { getLabelsByUsername, getUserByUsername } from 'graphql/queries'
 import MainLayout from 'components/layout/MainLayout'
 import Dashboard from 'components/Dashboard'
+import OverlayLoader from 'components/OverlayLoader'
 
 export default function Home({ user, labels }) {
   const dispatch = useDispatch()
@@ -16,6 +17,7 @@ export default function Home({ user, labels }) {
   return (
     <MainLayout>
       <Dashboard />
+      <OverlayLoader />
     </MainLayout>
   );
 }
@@ -32,6 +34,15 @@ export async function getServerSideProps({ req, res, locale }) {
   }
   
   const labels = await getLabelsByUsername(session.user.email)
+  const userData = await getUserByUsername(session.user.email)
+
+  if (userData.data?.userByUsername) {
+    const userInfo = userData.data.userByUsername
+    session.user = {
+      ...session.user,
+      ...userInfo
+    }
+  }
 
   return {
     props: {

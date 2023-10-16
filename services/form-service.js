@@ -1,4 +1,4 @@
-export default function loginValidate(values) {
+export function loginValidate(values) {
   const errors = {}
   const { email, password } = values;
 

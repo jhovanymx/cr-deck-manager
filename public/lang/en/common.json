@@ -64,7 +64,8 @@
     "LJ": "Lumberjack",
     "MA": "Magic Archer",
     "MK": "Mega Knight",
-    "MM": "Mighty Miner",
+    "MM": "Mega Minion",
+    "MIM": "Mighty Miner",
     "M": "Miner",
     "MP": "Mini P.E.K.K.A",
     "MH": "Minion Horde",
@@ -111,9 +112,10 @@
   },
   "errors": {
     "check": "Check the following errors",
-    "invalidCode": "Some card code is invalid",
+    "invalidCode": "Following card codes are invalid: {{codes}}",
     "deckLength": "Deck is conformed by 8 cards",
-    "onlyOneChampion": "Only one champion is allowed"
+    "onlyOneChampion": "Only one champion is allowed",
+    "noDupes": "Deck is "
   },
   "dashboard": {
     "newDeck": "New Deck",

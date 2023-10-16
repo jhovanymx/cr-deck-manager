@@ -1,35 +1,59 @@
+import appConfig from 'config/app.json'
 import { CardRarity } from 'model/constants'
+
+const { cards:cardList } = appConfig
 
 export function getCardUrl(code) {
   return `/cards/${code}.png`
 }
 
-export function parseCardsCode(cardsCode) {
-  const { cards:cardList } = appConfig
+export function parseCardsCode(cardsCode, config) {
   const errors = []
-  const extractedCodes = cardsCode.split(" ").filter(code => code)
+  const extractedCards = extractCards(cardsCode, config.shortcutsEnabled)
   
-  if (extractedCodes.some(code => !cardList.includes(code))) {
-    errors.push("errors.invalidCode")
+  const invalidCards = extractedCards.filter(card => !card.isValid)
+  if (invalidCards.length > 0) {
+    errors.push({
+      key: "errors.invalidCode",
+      params: {
+        codes: invalidCards.map(card => card.code).join(" ")
+      }
+    })
   }
   
-  if (extractedCodes.length > 8) {
-    errors.push("errors.deckLength")
+  if (extractedCards.length > 8) {
+    errors.push({key: "errors.deckLength"})
   }
 
-  const championsOnDeck = extractedCodes.filter(code => CardRarity.CHAMPION === getCardRarityByCode(code))
-  if (championsOnDeck.length > 1) {
-    errors.push("errors.onlyOneChampion")
+  const numberOfChampions = extractedCards.filter(card => CardRarity.CHAMPION === getCardRarityByCode(card.code))
+  if (numberOfChampions.length > 1) {
+    errors.push({key: "errors.onlyOneChampion"})
   }
 
+  return {cards: extractedCards, errors}
+}
+
+function extractCards(cardsCode, shortcutsEnabled) {
   let i = 0
-  const cards = extractedCodes.map(code => ({
-    code,
-    index: i++,
-    isEdit: true
-  }))
+  return cardsCode.split(" ").map(code => {
+    let validCode = convertToValidCardCode(code, shortcutsEnabled)
+    return {
+      code: validCode || code,
+      isValid: !!validCode,
+      index: i++,
+      isEdit: true
+    }
+  })
+}
 
-  return {cards, errors}
+function convertToValidCardCode(code, shortcutsEnabled) {
+  const extractor = (field) => {
+    const map = {}
+    cardList.forEach(card => map[card[field]] = card)
+    return map
+  }
+  const cardMap = extractor(shortcutsEnabled ? "shortcut" : "code")
+  return cardMap[code]?.code
 }
 
 function getCardRarityByCode(code) {
@@ -37,6 +61,23 @@ function getCardRarityByCode(code) {
   return card?.rarity
 }
 
-function getCardByCode(code) {
+export function getCardByCode(code) {
   return appConfig.cards.find(card => card.code === code)
+}
+
+export function validateInsertionToDeck(cards, code) {
+  const errors = []
+  const isDuplicated = cards.some(card => !card.isPlaceHolder && card.code === code)
+  if (isDuplicated) {
+    errors.push({key: "errors.noDupes"})
+  }
+
+  const numberOfChampions = [{code}, ...cards].reduce((total, card) => {
+    return total + (CardRarity.CHAMPION === getCardRarityByCode(card.code) ? 1 : 0)
+  }, 0)
+  if (numberOfChampions > 1) {
+    errors.push({key: "errors.onlyOneChampion"})
+  }
+
+  return errors
 }

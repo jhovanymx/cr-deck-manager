@@ -112,7 +112,7 @@
   },
   "errors": {
     "check": "Verifique los siguientes errores",
-    "invalidCode": "Algun código de carta es inválido",
+    "invalidCode": "Los siguientes códigos de carta son inválidos: {{codes}}",
     "deckLength": "El mazo debe tener 8 cartas",
     "onlyOneChampion": "Solo un campeón es permitido"
   },

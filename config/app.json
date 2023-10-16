@@ -6,7 +6,7 @@
         "type": "troop",
         "rarity": "champion",
         "isWinCondition": false,
-        "shortcuts": ["RA"]
+        "shortcut": "RA"
     },
     {
         "code": "A",
@@ -14,7 +14,7 @@
         "type": "troop",
         "rarity": "common",
         "isWinCondition": false,
-        "shortcuts": []
+        "shortcut": "A"
     },
     {
         "code": "AR",
@@ -22,7 +22,7 @@
         "type": "spell",
         "rarity": "common",
         "isWinCondition": false,
-        "shortcuts": []
+        "shortcut": "F"
     },
     {
       "code": "BD",
@@ -30,7 +30,7 @@
       "type": "troop",
       "rarity": "epic",
       "isWinCondition": false,
-      "shortcuts": ["BDR"]
+      "shortcut": "BDR"
     },
     {
       "code": "B",
@@ -38,7 +38,7 @@
       "type": "troop",
       "rarity": "epic",
       "isWinCondition": true,
-      "shortcuts": ["GL"]
+      "shortcut": "GL"
     },
     {
       "code": "BA",
@@ -46,7 +46,7 @@
       "type": "troop",
       "rarity": "legendary",
       "isWinCondition": false,
-      "shortcuts": ["BAN"]
+      "shortcut": "BAN"
     },
     {
       "code": "BB",
@@ -54,7 +54,7 @@
       "type": "spell",
       "rarity": "epic",
       "isWinCondition": false,
-      "shortcuts": []
+      "shortcut": "BB"
     },
     {
       "code": "BH",
@@ -62,7 +62,7 @@
       "type": "building",
       "rarity": "rare",
       "isWinCondition": false,
-      "shortcuts": ["CB"]
+      "shortcut": "CB"
     },
     {
       "code": "BAR",
@@ -70,7 +70,7 @@
       "type": "troop",
       "rarity": "common",
       "isWinCondition": false,
-      "shortcuts": ["BA"]
+      "shortcut": "BA"
     },
     {
       "code": "BAT",
@@ -78,7 +78,7 @@
       "type": "troop",
       "rarity": "common",
       "isWinCondition": false,
-      "shortcuts": ["MU"]
+      "shortcut": "MU"
     },
     {
       "code": "BAH",
@@ -86,7 +86,7 @@
       "type": "troop",
       "rarity": "rare",
       "isWinCondition": false,
-      "shortcuts": ["CG"]
+      "shortcut": "CG"
     },
     {
       "code": "BR",
@@ -94,7 +94,7 @@
       "type": "troop",
       "rarity": "rare",
       "isWinCondition": true,
-      "shortcuts": ["AB"]
+      "shortcut": "AB"
     },
     {
       "code": "BT",
@@ -102,7 +102,7 @@
       "type": "building",
       "rarity": "rare",
       "isWinCondition": false,
-      "shortcuts": ["TB"]
+      "shortcut": "TB"
     },
     {
       "code": "BO",
@@ -110,7 +110,7 @@
       "type": "troop",
       "rarity": "common",
       "isWinCondition": false,
-      "shortcuts": []
+      "shortcut": "BO"
     },
     {
       "code": "BOW",
@@ -118,7 +118,7 @@
       "type": "troop",
       "rarity": "epic",
       "isWinCondition": false,
-      "shortcuts": ["LAN"]
+      "shortcut": "LAN"
     },
     {
       "code": "C",
@@ -126,7 +126,7 @@
       "type": "building",
       "rarity": "common",
       "isWinCondition": false,
-      "shortcuts": []
+      "shortcut": "C"
     },
     {
       "code": "CC",
@@ -134,7 +134,7 @@
       "type": "troop",
       "rarity": "epic",
       "isWinCondition": false,
-      "shortcuts": ["CR"]
+      "shortcut": "CR"
     },
     {
       "code": "CL",
@@ -142,7 +142,7 @@
       "type": "spell",
       "rarity": "epic",
       "isWinCondition": false,
-      "shortcuts": []
+      "shortcut": "CL"
     },
     {
       "code": "DP",
@@ -150,7 +150,7 @@
       "type": "troop",
       "rarity": "epic",
       "isWinCondition": false,
-      "shortcuts": ["PO"]
+      "shortcut": "PO"
     },
     {
       "code": "DG",
@@ -158,7 +158,7 @@
       "type": "troop",
       "rarity": "rare",
       "isWinCondition": false,
-      "shortcuts": ["DLA"]
+      "shortcut": "DLA"
     },
     {
       "code": "E",
@@ -166,7 +166,7 @@
       "type": "spell",
       "rarity": "rare",
       "isWinCondition": false,
-      "shortcuts": ["TE"]
+      "shortcut": "TE"
     },
     {
       "code": "ED",
@@ -174,7 +174,7 @@
       "type": "troop",
       "rarity": "epic",
       "isWinCondition": false,
-      "shortcuts": ["DEL"]
+      "shortcut": "DEL"
     },
     {
       "code": "EG",
@@ -182,7 +182,7 @@
       "type": "troop",
       "rarity": "epic",
       "isWinCondition": true,
-      "shortcuts": ["GEL"]
+      "shortcut": "GEL"
     },
     {
       "code": "ES",
@@ -190,7 +190,7 @@
       "type": "troop",
       "rarity": "epic",
       "isWinCondition": false,
-      "shortcuts": ["EEL"]
+      "shortcut": "EEL"
     },
     {
       "code": "EW",
@@ -198,7 +198,7 @@
       "type": "troop",
       "rarity": "epic",
       "isWinCondition": false,
-      "shortcuts": ["MEL"]
+      "shortcut": "MEL"
     },
     {
       "code": "EB",
@@ -206,7 +206,7 @@
       "type": "troop",
       "rarity": "common",
       "isWinCondition": false,
-      "shortcuts": ["BE"]
+      "shortcut": "BE"
     },
     {
       "code": "EC",
@@ -214,7 +214,7 @@
       "type": "spell",
       "rarity": "rare",
       "isWinCondition": false,
-      "shortcuts": ["RE"]
+      "shortcut": "RE"
     },
     {
       "code": "ELG",
@@ -222,7 +222,7 @@
       "type": "troop",
       "rarity": "rare",
       "isWinCondition": false,
-      "shortcuts": ["GE"]
+      "shortcut": "GE"
     },
     {
       "code": "EX",
@@ -230,7 +230,7 @@
       "type": "troop",
       "rarity": "epic",
       "isWinCondition": false,
-      "shortcuts": ["VER"]
+      "shortcut": "VER"
     },
     {
       "code": "FS",
@@ -238,7 +238,7 @@
       "type": "troop",
       "rarity": "common",
       "isWinCondition": false,
-      "shortcuts": ["EF"]
+      "shortcut": "EF"
     },
     {
       "code": "F",
@@ -246,7 +246,7 @@
       "type": "spell",
       "rarity": "rare",
       "isWinCondition": false,
-      "shortcuts": ["BF"]
+      "shortcut": "BF"
     },
     {
       "code": "FC",
@@ -254,7 +254,7 @@
       "type": "troop",
       "rarity": "common",
       "isWinCondition": false,
-      "shortcuts": ["LF"]
+      "shortcut": "LF"
     },
     {
       "code": "FM",
@@ -262,7 +262,7 @@
       "type": "troop",
       "rarity": "legendary",
       "isWinCondition": false,
-      "shortcuts": ["PES"]
+      "shortcut": "PES"
     },
     {
       "code": "FLM",
@@ -270,7 +270,7 @@
       "type": "troop",
       "rarity": "rare",
       "isWinCondition": false,
-      "shortcuts": ["MV"]
+      "shortcut": "MV"
     },
     {
       "code": "FR",
@@ -278,7 +278,7 @@
       "type": "spell",
       "rarity": "epic",
       "isWinCondition": false,
-      "shortcuts": ["HI"]
+      "shortcut": "HI"
     },
     {
       "code": "FU",
@@ -286,7 +286,7 @@
       "type": "building",
       "rarity": "rare",
       "isWinCondition": false,
-      "shortcuts": ["H"]
+      "shortcut": "H"
     },
     {
       "code": "G",
@@ -294,7 +294,7 @@
       "type": "troop",
       "rarity": "rare",
       "isWinCondition": true,
-      "shortcuts": []
+      "shortcut": "G"
     },
     {
       "code": "GS",
@@ -302,7 +302,7 @@
       "type": "troop",
       "rarity": "epic",
       "isWinCondition": false,
-      "shortcuts": ["EG"]
+      "shortcut": "EG"
     },
     {
       "code": "GIS",
@@ -310,7 +310,7 @@
       "type": "spell",
       "rarity": "common",
       "isWinCondition": false,
-      "shortcuts": ["BNI"]
+      "shortcut": "BNI"
     },
     {
       "code": "GB",
@@ -318,7 +318,7 @@
       "type": "troop",
       "rarity": "epic",
       "isWinCondition": true,
-      "shortcuts": ["BD"]
+      "shortcut": "BD"
     },
     {
       "code": "GC",
@@ -326,7 +326,7 @@
       "type": "building",
       "rarity": "rare",
       "isWinCondition": false,
-      "shortcuts": ["JF"]
+      "shortcut": "JF"
     },
     {
       "code": "GD",
@@ -334,7 +334,7 @@
       "type": "building",
       "rarity": "epic",
       "isWinCondition": true,
-      "shortcuts": ["ED"]
+      "shortcut": "ED"
     },
     {
       "code": "GG",
@@ -342,7 +342,7 @@
       "type": "troop",
       "rarity": "common",
       "isWinCondition": false,
-      "shortcuts": ["PD"]
+      "shortcut": "PD"
     },
     {
       "code": "GOG",
@@ -350,7 +350,7 @@
       "type": "troop",
       "rarity": "epic",
       "isWinCondition": true,
-      "shortcuts": ["DG"]
+      "shortcut": "DG"
     },
     {
       "code": "GOH",
@@ -358,7 +358,7 @@
       "type": "building",
       "rarity": "rare",
       "isWinCondition": false,
-      "shortcuts": ["CD"]
+      "shortcut": "CD"
     },
     {
       "code": "GO",
@@ -366,7 +366,7 @@
       "type": "troop",
       "rarity": "common",
       "isWinCondition": false,
-      "shortcuts": ["D"]
+      "shortcut": "D"
     },
     {
       "code": "GK",
@@ -374,7 +374,7 @@
       "type": "troop",
       "rarity": "champion",
       "isWinCondition": false,
-      "shortcuts": ["CAD"]
+      "shortcut": "CAD"
     },
     {
       "code": "GOL",
@@ -382,7 +382,7 @@
       "type": "troop",
       "rarity": "epic",
       "isWinCondition": false,
-      "shortcuts": ["GO"]
+      "shortcut": "GO"
     },
     {
       "code": "GR",
@@ -390,7 +390,7 @@
       "type": "spell",
       "rarity": "legendary",
       "isWinCondition": true,
-      "shortcuts": ["CE"]
+      "shortcut": "CE"
     },
     {
       "code": "GU",
@@ -398,7 +398,7 @@
       "type": "troop",
       "rarity": "epic",
       "isWinCondition": false,
-      "shortcuts": []
+      "shortcut": "GU"
     },
     {
       "code": "HS",
@@ -406,7 +406,7 @@
       "type": "troop",
       "rarity": "rare",
       "isWinCondition": false,
-      "shortcuts": ["ESA"]
+      "shortcut": "ESA"
     },
     {
       "code": "HR",
@@ -414,7 +414,7 @@
       "type": "troop",
       "rarity": "rare",
       "isWinCondition": true,
-      "shortcuts": ["MO"]
+      "shortcut": "MO"
     },
     {
       "code": "H",
@@ -422,7 +422,7 @@
       "type": "troop",
       "rarity": "epic",
       "isWinCondition": false,
-      "shortcuts": ["CAZ"]
+      "shortcut": "CAZ"
     },
     {
       "code": "IG",
@@ -430,7 +430,7 @@
       "type": "troop",
       "rarity": "rare",
       "isWinCondition": false,
-      "shortcuts": ["GH"]
+      "shortcut": "GH"
     },
     {
       "code": "IS",
@@ -438,7 +438,7 @@
       "type": "troop",
       "rarity": "common",
       "isWinCondition": false,
-      "shortcuts": ["EH"]
+      "shortcut": "EH"
     },
     {
       "code": "IW",
@@ -446,7 +446,7 @@
       "type": "troop",
       "rarity": "legendary",
       "isWinCondition": false,
-      "shortcuts": ["MH"]
+      "shortcut": "MH"
     },
     {
       "code": "ID",
@@ -454,7 +454,7 @@
       "type": "troop",
       "rarity": "rare",
       "isWinCondition": false,
-      "shortcuts": ["DI"]
+      "shortcut": "DI"
     },
     {
       "code": "IT",
@@ -462,7 +462,7 @@
       "type": "building",
       "rarity": "rare",
       "isWinCondition": false,
-      "shortcuts": ["TI"]
+      "shortcut": "TI"
     },
     {
       "code": "K",
@@ -470,7 +470,7 @@
       "type": "troop",
       "rarity": "common",
       "isWinCondition": false,
-      "shortcuts": ["CA"]
+      "shortcut": "CA"
     },
     {
       "code": "LH",
@@ -478,7 +478,7 @@
       "type": "troop",
       "rarity": "legendary",
       "isWinCondition": true,
-      "shortcuts": ["SL"]
+      "shortcut": "SL"
     },
     {
       "code": "L",
@@ -486,7 +486,7 @@
       "type": "spell",
       "rarity": "epic",
       "isWinCondition": false,
-      "shortcuts": ["R"]
+      "shortcut": "R"
     },
     {
       "code": "LJ",
@@ -494,7 +494,7 @@
       "type": "troop",
       "rarity": "legendary",
       "isWinCondition": false,
-      "shortcuts": ["L"]
+      "shortcut": "L"
     },
     {
       "code": "MA",
@@ -502,7 +502,7 @@
       "type": "troop",
       "rarity": "legendary",
       "isWinCondition": false,
-      "shortcuts": ["AM"]
+      "shortcut": "AM"
     },
     {
       "code": "MK",
@@ -510,15 +510,23 @@
       "type": "troop",
       "rarity": "legendary",
       "isWinCondition": false,
-      "shortcuts": ["MC"]
+      "shortcut": "MC"
     },
     {
       "code": "MM",
+      "elixirCost": 3,
+      "type": "troop",
+      "rarity": "rare",
+      "isWinCondition": false,
+      "shortcut": "ME"
+    },
+    {
+      "code": "MIM",
       "elixirCost": 4,
       "type": "troop",
       "rarity": "champion",
       "isWinCondition": false,
-      "shortcuts": ["GM"]
+      "shortcut": "GM"
     },
     {
       "code": "M",
@@ -526,7 +534,7 @@
       "type": "troop",
       "rarity": "legendary",
       "isWinCondition": false,
-      "shortcuts": ["MI"]
+      "shortcut": "MI"
     },
     {
       "code": "MP",
@@ -534,7 +542,7 @@
       "type": "troop",
       "rarity": "rare",
       "isWinCondition": false,
-      "shortcuts": []
+      "shortcut": "MP"
     },
     {
       "code": "MH",
@@ -542,7 +550,7 @@
       "type": "troop",
       "rarity": "common",
       "isWinCondition": false,
-      "shortcuts": ["HE"]
+      "shortcut": "HE"
     },
     {
       "code": "MI",
@@ -550,7 +558,7 @@
       "type": "troop",
       "rarity": "common",
       "isWinCondition": false,
-      "shortcuts": ["E"]
+      "shortcut": "E"
     },
     {
       "code": "MIR",
@@ -558,7 +566,7 @@
       "type": "spell",
       "rarity": "epic",
       "isWinCondition": false,
-      "shortcuts": ["ESP"]
+      "shortcut": "ESP"
     },
     {
       "code": "MO",
@@ -566,7 +574,7 @@
       "type": "building",
       "rarity": "common",
       "isWinCondition": true,
-      "shortcuts": ["MOR"]
+      "shortcut": "MOR"
     },
     {
       "code": "MON",
@@ -574,7 +582,7 @@
       "type": "troop",
       "rarity": "champion",
       "isWinCondition": false,
-      "shortcuts": []
+      "shortcut": "MON"
     },
     {
       "code": "MW",
@@ -582,7 +590,7 @@
       "type": "troop",
       "rarity": "legendary",
       "isWinCondition": false,
-      "shortcuts": ["BM"]
+      "shortcut": "BM"
     },
     {
       "code": "MU",
@@ -590,7 +598,7 @@
       "type": "troop",
       "rarity": "rare",
       "isWinCondition": false,
-      "shortcuts": ["MOS"]
+      "shortcut": "MOS"
     },
     {
       "code": "NW",
@@ -598,7 +606,7 @@
       "type": "troop",
       "rarity": "legendary",
       "isWinCondition": false,
-      "shortcuts": ["BN"]
+      "shortcut": "BN"
     },
     {
       "code": "P",
@@ -606,7 +614,7 @@
       "type": "troop",
       "rarity": "epic",
       "isWinCondition": false,
-      "shortcuts": ["PE"]
+      "shortcut": "PE"
     },
     {
       "code": "PH",
@@ -614,7 +622,7 @@
       "type": "troop",
       "rarity": "legendary",
       "isWinCondition": false,
-      "shortcuts": ["FE"]
+      "shortcut": "FE"
     },
     {
       "code": "PO",
@@ -622,7 +630,7 @@
       "type": "spell",
       "rarity": "epic",
       "isWinCondition": false,
-      "shortcuts": ["VE"]
+      "shortcut": "VE"
     },
     {
       "code": "PR",
@@ -630,7 +638,7 @@
       "type": "troop",
       "rarity": "epic",
       "isWinCondition": false,
-      "shortcuts": ["P"]
+      "shortcut": "P"
     },
     {
       "code": "PRI",
@@ -638,7 +646,7 @@
       "type": "troop",
       "rarity": "legendary",
       "isWinCondition": false,
-      "shortcuts": ["PR"]
+      "shortcut": "PR"
     },
     {
       "code": "R",
@@ -646,7 +654,7 @@
       "type": "spell",
       "rarity": "epic",
       "isWinCondition": false,
-      "shortcuts": ["FU"]
+      "shortcut": "FU"
     },
     {
       "code": "RR",
@@ -654,7 +662,7 @@
       "type": "troop",
       "rarity": "legendary",
       "isWinCondition": true,
-      "shortcuts": ["MCA"]
+      "shortcut": "MCA"
     },
     {
       "code": "RA",
@@ -662,7 +670,7 @@
       "type": "troop",
       "rarity": "common",
       "isWinCondition": false,
-      "shortcuts": ["PI"]
+      "shortcut": "PI"
     },
     {
       "code": "RO",
@@ -670,7 +678,7 @@
       "type": "spell",
       "rarity": "epic",
       "isWinCondition": false,
-      "shortcuts": ["CO"]
+      "shortcut": "CO"
     },
     {
       "code": "RD",
@@ -678,7 +686,7 @@
       "type": "spell",
       "rarity": "common",
       "isWinCondition": false,
-      "shortcuts": ["PAR"]
+      "shortcut": "PAR"
     },
     {
       "code": "RG",
@@ -686,7 +694,7 @@
       "type": "troop",
       "rarity": "legendary",
       "isWinCondition": false,
-      "shortcuts": ["FR"]
+      "shortcut": "FR"
     },
     {
       "code": "ROG",
@@ -694,7 +702,7 @@
       "type": "troop",
       "rarity": "common",
       "isWinCondition": true,
-      "shortcuts": ["GN"]
+      "shortcut": "GN"
     },
     {
       "code": "RH",
@@ -702,7 +710,7 @@
       "type": "troop",
       "rarity": "rare",
       "isWinCondition": true,
-      "shortcuts": ["PRE"]
+      "shortcut": "PRE"
     },
     {
       "code": "ROR",
@@ -710,7 +718,7 @@
       "type": "troop",
       "rarity": "common",
       "isWinCondition": false,
-      "shortcuts": ["RR"]
+      "shortcut": "RR"
     },
     {
       "code": "SA",
@@ -718,7 +726,7 @@
       "type": "troop",
       "rarity": "epic",
       "isWinCondition": false,
-      "shortcuts": ["EE"]
+      "shortcut": "EE"
     },
     {
       "code": "SB",
@@ -726,7 +734,7 @@
       "type": "spell",
       "rarity": "common",
       "isWinCondition": false,
-      "shortcuts": ["BES"]
+      "shortcut": "BES"
     },
     {
       "code": "SD",
@@ -734,7 +742,7 @@
       "type": "troop",
       "rarity": "common",
       "isWinCondition": false,
-      "shortcuts": ["DES"]
+      "shortcut": "DES"
     },
     {
       "code": "SK",
@@ -742,7 +750,7 @@
       "type": "troop",
       "rarity": "champion",
       "isWinCondition": false,
-      "shortcuts": ["REE"]
+      "shortcut": "REE"
     },
     {
       "code": "S",
@@ -750,7 +758,7 @@
       "type": "troop",
       "rarity": "common",
       "isWinCondition": false,
-      "shortcuts": ["ES"]
+      "shortcut": "ES"
     },
     {
       "code": "SP",
@@ -758,7 +766,7 @@
       "type": "troop",
       "rarity": "legendary",
       "isWinCondition": true,
-      "shortcuts": ["CH"]
+      "shortcut": "CH"
     },
     {
       "code": "SG",
@@ -766,7 +774,7 @@
       "type": "troop",
       "rarity": "common",
       "isWinCondition": false,
-      "shortcuts": ["DL"]
+      "shortcut": "DL"
     },
     {
       "code": "T",
@@ -774,7 +782,7 @@
       "type": "building",
       "rarity": "common",
       "isWinCondition": false,
-      "shortcuts": ["TT"]
+      "shortcut": "TT"
     },
     {
       "code": "TL",
@@ -782,7 +790,7 @@
       "type": "spell",
       "rarity": "legendary",
       "isWinCondition": false,
-      "shortcuts": ["T"]
+      "shortcut": "T"
     },
     {
       "code": "TM",
@@ -790,7 +798,7 @@
       "type": "troop",
       "rarity": "rare",
       "isWinCondition": false,
-      "shortcuts": []
+      "shortcut": "TM"
     },
     {
       "code": "TO",
@@ -798,7 +806,7 @@
       "type": "building",
       "rarity": "rare",
       "isWinCondition": false,
-      "shortcuts": ["LA"]
+      "shortcut": "LA"
     },
     {
       "code": "TOR",
@@ -806,7 +814,7 @@
       "type": "spell",
       "rarity": "epic",
       "isWinCondition": false,
-      "shortcuts": ["TO"]
+      "shortcut": "TO"
     },
     {
       "code": "V",
@@ -814,7 +822,7 @@
       "type": "troop",
       "rarity": "rare",
       "isWinCondition": false,
-      "shortcuts": []
+      "shortcut": "V"
     },
     {
       "code": "WB",
@@ -822,7 +830,7 @@
       "type": "spell",
       "rarity": "epic",
       "isWinCondition": false,
-      "shortcuts": ["RM"]
+      "shortcut": "RM"
     },
     {
       "code": "W",
@@ -830,7 +838,7 @@
       "type": "troop",
       "rarity": "epic",
       "isWinCondition": false,
-      "shortcuts": ["B"]
+      "shortcut": "B"
     },
     {
       "code": "WI",
@@ -838,7 +846,7 @@
       "type": "troop",
       "rarity": "rare",
       "isWinCondition": false,
-      "shortcuts": ["M"]
+      "shortcut": "M"
     },
     {
       "code": "X",
@@ -846,7 +854,7 @@
       "type": "building",
       "rarity": "epic",
       "isWinCondition": false,
-      "shortcuts": ["BAL"]
+      "shortcut": "BAL"
     },
     {
       "code": "Z",
@@ -854,7 +862,7 @@
       "type": "spell",
       "rarity": "common",
       "isWinCondition": false,
-      "shortcuts": ["DE"]
+      "shortcut": "DE"
     },
     {
       "code": "ZA",
@@ -862,7 +870,7 @@
       "type": "troop",
       "rarity": "rare",
       "isWinCondition": false,
-      "shortcuts": ["EL"]
+      "shortcut": "EL"
     }
   ],
   "cardSize": {

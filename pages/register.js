@@ -6,7 +6,7 @@ import { HiAtSymbol, HiFingerPrint } from 'react-icons/hi';
 import { useState } from "react";
 import { useFormik } from 'formik';
 import { useRouter } from "next/router";
-import { registerValidate } from 'lib/validate-form';
+import { registerValidate } from 'services/form-service';
 import { ToastContainer, toast } from 'react-toastify'
 
 export default function Register() {

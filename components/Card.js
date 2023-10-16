@@ -3,8 +3,9 @@ import Image from 'next/image'
 import appConfig from 'config/app.json'
 import { getCardUrl } from 'services/card-service'
 
-export default function Card ({ code, isPlaceHolder, index }) {
+export default function Card ({ index, code, isSelected, isSelectable, isPlaceHolder, onClickCard = () => {} }) {
   const { cardSize } = appConfig
+  const cardStyle = {height: cardSize.height, width: cardSize.width}
 
   const [{ isDragging }, dragRef] = useDrag(() => ({
     type: "card",
@@ -13,18 +14,20 @@ export default function Card ({ code, isPlaceHolder, index }) {
     })
   }))
 
-  const cardStyle = {height: cardSize.height, width: cardSize.width}
+  const onClickCardHandler = () => {
+    onClickCard({index, code, isSelectable})
+  }
 
   return (
     <div ref={dragRef} className="rounded-lg">
-      <div className="rounded-md bg-gray-400" style={cardStyle} >
+      <div className={`rounded-md bg-gray-400 ${isSelected && 'animate-waving-hand'} cursor-pointer`} style={cardStyle} onClick={onClickCardHandler}>
         { !isPlaceHolder && 
           <Image 
-            className="" 
+            className=""
             width={cardSize.width}
             height={cardSize.height}
-            alt="Card Image" 
-            src={getCardUrl(code)} 
+            alt="Card Image"
+            src={getCardUrl(code)}
           />
         }
       </div>

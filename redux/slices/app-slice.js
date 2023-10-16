@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { convertToCurrentCards } from 'lib/converters'
+import { convertToCurrentCards } from 'converters/card-converter'
+import { MAX_DECK_LENGTH } from 'constants/app-constants'
 
 export const appSlice = createSlice({
   name: "app",
@@ -12,7 +13,11 @@ export const appSlice = createSlice({
     },
     groups: [],
     labels: [],
-    isGroupView: false
+    isGroupView: false,
+    config: {
+      shortcutsEnabled: true
+    },
+    isLoaderVisible: false
   },
   reducers: {
     setLabels: (state, { payload }) => {
@@ -30,12 +35,31 @@ export const appSlice = createSlice({
     setCurrentDeck: (state, { payload }) => {
       state.currentDeck = payload
     },
+    setDisplayNameCurrentDeck: (state, { payload }) => {
+      state.currentDeck.displayName = payload
+    },
     setCardsCurrentDeck: (state, { payload }) => {
       state.currentDeck.cards = convertToCurrentCards(payload)
     },
+    selectCardCurrentDeck: (state, { payload }) => {
+      const card = state.currentDeck.cards[payload]
+      if (card) {
+        state.currentDeck.cards.forEach(card => card.isSelected = false)
+        card.isSelected = true
+      }
+    },
+    setSelectedCardCurrentDeck: (state, { payload: code }) => {
+      const selectedCard = state.currentDeck.cards.find(card => card.isSelected)
+      if (selectedCard) {
+        selectedCard.code = code
+        selectedCard.isPlaceHolder = false
+        const newIndex = (selectedCard.index + 1) % MAX_DECK_LENGTH
+        appSlice.caseReducers.selectCardCurrentDeck(state, {payload: newIndex})
+      }
+    },
     clearCurrentDeck: (state) => {
       state.currentDeck.displayName = ""
-      state.currentDeck.cards = []
+      state.currentDeck.cards = convertToCurrentCards([])
     },
     setGroup: (state, { payload }) => {
       state.groups = payload
@@ -43,11 +67,19 @@ export const appSlice = createSlice({
     setGroupView: (state, { payload }) => {
       state.isGroupView = payload
     },
+    showLoader: (state) => {
+      state.isLoaderVisible = true
+    },
+    hideLoader: (state) => {
+      state.isLoaderVisible = false
+    }
   }
 })
 
 export const { 
-  setLabels, addDeck, setDecks, setCurrentDeck, setCardsCurrentDeck, clearCurrentDeck,
-  setGroup, setGroupView
+  setLabels, addDeck, setDecks, 
+  setCurrentDeck, setDisplayNameCurrentDeck, setCardsCurrentDeck, selectCardCurrentDeck, setSelectedCardCurrentDeck, clearCurrentDeck,
+  setGroup, setGroupView,
+  showLoader, hideLoader
 } = appSlice.actions
 export default appSlice.reducer

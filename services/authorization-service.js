@@ -1,10 +1,9 @@
-import mongoDb from 'database/mongo-db';
-import User from 'model/schema';
-import { compare } from 'bcryptjs';
+import mongoDb from 'database/mongo-db'
+import User from 'model/schema'
+import { compare } from 'bcryptjs'
+import { WRONG_CREDENTIALS } from 'constants/app-constants'
 
-const WRONG_CREDENTIALS = "Password or email are invalid"
-
-export default async function authorize(credentials, req) {
+export async function authorizeCredentials(credentials, req) {
   mongoDb().catch(() => res.json({error: "Connection error"}))
 
   const { email, password } = credentials

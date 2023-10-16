@@ -6,7 +6,7 @@ import { signIn} from 'next-auth/react';
 import { HiAtSymbol, HiFingerPrint } from 'react-icons/hi';
 import { useFormik } from 'formik';
 import { useState } from "react";
-import loginValidate from 'lib/validate-form';
+import { loginValidate } from 'services/form-service';
 import { useRouter } from "next/router";
 import { ToastContainer, toast } from 'react-toastify'
 import { authOptions } from 'pages/api/auth/[...nextauth]'
