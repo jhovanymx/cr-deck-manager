@@ -6,9 +6,6 @@ import { appWithTranslation } from 'next-i18next'
 import store from 'redux/store'
 import 'styles/globals.css'
 import "styles/overlay-loader.css"
-import "swiper/css"
-import "swiper/css/grid"
-import "swiper/css/pagination"
 
 function MyApp({ Component, pageProps }) {
   return (
