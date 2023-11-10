@@ -60,6 +60,7 @@
     "IT": "Interno Tower",
     "K": "Knight",
     "LH": "Lava Hound",
+    "LP": "Little Prince",
     "L": "Ligthning",
     "LJ": "Lumberjack",
     "MA": "Magic Archer",
@@ -115,7 +116,7 @@
     "invalidCode": "Following card codes are invalid: {{codes}}",
     "deckLength": "Deck is conformed by 8 cards",
     "onlyOneChampion": "Only one champion is allowed",
-    "noDupes": "Deck is "
+    "noDupes": "No dupes are allowed"
   },
   "dashboard": {
     "newDeck": "New Deck",

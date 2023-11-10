@@ -60,6 +60,7 @@
     "IT": "Torre Infernal",
     "K": "Caballero",
     "LH": "Sabueso de Lava",
+    "LP": "Principito",
     "L": "Rayo",
     "LJ": "Leñador",
     "MA": "Arquero Mágico",
@@ -114,7 +115,8 @@
     "check": "Verifique los siguientes errores",
     "invalidCode": "Los siguientes códigos de carta son inválidos: {{codes}}",
     "deckLength": "El mazo debe tener 8 cartas",
-    "onlyOneChampion": "Solo un campeón es permitido"
+    "onlyOneChampion": "Solo un campeón es permitido",
+    "noDupes": "Se prohibe cartas duplicadas"
   },
   "dashboard": {
     "newDeck": "Nuevo Mazo",

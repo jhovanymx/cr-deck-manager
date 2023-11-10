@@ -4,8 +4,6 @@ import { Dialog, Transition  } from '@headlessui/react'
 import { BiRename, HiFingerPrint } from 'react-icons/bi'
 import { MdQrCode } from 'react-icons/md'
 import { ToastContainer, toast } from 'react-toastify'
-import { Grid, Pagination } from "swiper"
-import { Swiper, SwiperSlide } from 'swiper/react'
 import { useTranslation } from "react-i18next"
 import 'react-toastify/dist/ReactToastify.css'
 import Card from 'components/Card'
@@ -16,7 +14,7 @@ import appConfig from 'config/app.json'
 import { setDisplayNameCurrentDeck, setCardsCurrentDeck, setSelectedCardCurrentDeck, clearCurrentDeck, showLoader, hideLoader } from 'redux/slices/app-slice'
 import { parseCardsCode, validateInsertionToDeck } from 'services/card-service'
 import { useAddDeckMutation } from 'api/deck-api'
-import { showErrorMesssages } from 'services/message-service'
+import { showErrorMesssages, showErrorMesssage } from 'services/message-service'
 
 export default function DeckDialog({ isOpen, setIsOpen, isEdit = false, deck }) {
   const { cards: cardList} = appConfig
@@ -80,9 +78,9 @@ export default function DeckDialog({ isOpen, setIsOpen, isEdit = false, deck }) 
   }
 
   const onClickCard = (card) => {
-    const errors = validateInsertionToDeck(currentDeck.cards, card.code)
-    if (errors.length > 0) {
-      showErrorMesssages(toast, t, errors)
+    const error = validateInsertionToDeck(currentDeck.cards, card.code)
+    if (error) {
+      showErrorMesssage(toast, t, error)
     } else {
       dispatch(setSelectedCardCurrentDeck(card.code))
     }
@@ -115,7 +113,7 @@ export default function DeckDialog({ isOpen, setIsOpen, isEdit = false, deck }) 
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="max-w-md lg:max-w-lg xl:max-w-2xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+              <Dialog.Panel className="max-w-md lg:max-w-2xl xl:max-w-3xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
                 <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-gray-900">
                   {t(`deckDialog.${isEdit ? "editDeck" : "newDeck"}`)}
                 </Dialog.Title>
@@ -136,7 +134,7 @@ export default function DeckDialog({ isOpen, setIsOpen, isEdit = false, deck }) 
                   </span>
                 </div>
 
-                <div className="flex flex-row space-y-5 mt-4 sm:flex-col sm:space-x-0">
+                <div className="flex flex-col lg:flex-row lg:space-x-5 lg:items-center space-y-5 mt-4">
                   <CurrentDeck />
                   <div className={`${styles.input_group} grow`}>
                     <input
@@ -152,29 +150,16 @@ export default function DeckDialog({ isOpen, setIsOpen, isEdit = false, deck }) 
                     </span>
                   </div>
                 </div>
-                <Swiper
-                  spaceBetween={2}
-                  slidesPerView={4}
-                  grid={{
-                    rows: 4
-                  }}
-                  pagination={{
-                    clickable: true,
-                  }}n
-                  modules={[Grid, Pagination]}
-                  className="mt-4"
-                >
+                <div className="flex flex-wrap mt-4 gap-2 h-[270px] overflow-auto">
                   {
                     cardList.map(card => (
-                      <SwiperSlide key={card.code}>
-                        <Card
-                          key={card.code}
-                          code={card.code} 
-                          onClickCard={onClickCard} />
-                      </SwiperSlide>
+                      <Card
+                        key={card.code}
+                        code={card.code} 
+                        onClickCard={onClickCard} />
                     ))
                   }
-                </Swiper>
+                </div>
                 <div className="mt-4 space-x-2 text-right">
                   <Button text={t(`deckDialog.${isEdit ? "save" : "add"}`)} onButtonClick={() => onClickSaveAddButton()} />
                   <Button text={t("deckDialog.close")} onButtonClick={() => setIsOpen(false)} />

@@ -59,6 +59,7 @@ Inferno Tower
 Knight
 Lava Hound
 Ligthning
+Little Prince
 Lumberjack
 Magic Archer
 Mega Knight

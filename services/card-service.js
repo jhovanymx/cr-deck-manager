@@ -66,18 +66,17 @@ export function getCardByCode(code) {
 }
 
 export function validateInsertionToDeck(cards, code) {
-  const errors = []
   const isDuplicated = cards.some(card => !card.isPlaceHolder && card.code === code)
   if (isDuplicated) {
-    errors.push({key: "errors.noDupes"})
+    return "errors.noDupes"
   }
 
   const numberOfChampions = [{code}, ...cards].reduce((total, card) => {
     return total + (CardRarity.CHAMPION === getCardRarityByCode(card.code) ? 1 : 0)
   }, 0)
   if (numberOfChampions > 1) {
-    errors.push({key: "errors.onlyOneChampion"})
+    return "errors.onlyOneChampion"
   }
 
-  return errors
+  return null
 }

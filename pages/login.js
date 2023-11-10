@@ -1,32 +1,38 @@
-import Link from "next/link";
-import Image from "next/image";
-import IdentityLayout from "components/layout/IdentityLayout";
-import styles from 'styles/Form.module.css';
-import { signIn} from 'next-auth/react';
-import { HiAtSymbol, HiFingerPrint } from 'react-icons/hi';
-import { useFormik } from 'formik';
-import { useState } from "react";
-import { loginValidate } from 'services/form-service';
-import { useRouter } from "next/router";
+import { useState } from "react"
+import { useDispatch } from 'react-redux'
+import Link from "next/link"
+import Image from "next/image"
+import { useRouter } from "next/router"
+import { getServerSession } from "next-auth/next"
+import IdentityLayout from "components/layout/IdentityLayout"
+import OverlayLoader from 'components/OverlayLoader'
+import styles from 'styles/Form.module.css'
+import { signIn} from 'next-auth/react'
+import { HiAtSymbol, HiFingerPrint } from 'react-icons/hi'
+import { useFormik } from 'formik'
+import { loginValidate } from 'services/form-service'
 import { ToastContainer, toast } from 'react-toastify'
 import { authOptions } from 'pages/api/auth/[...nextauth]'
-import { getServerSession } from "next-auth/next"
+import { showLoader, hideLoader } from 'redux/slices/app-slice'
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false)
   const router = useRouter()
+  const dispatch = useDispatch()
 
   const onSignGitHub = () => {
     signIn("github", {callbackUrl: process.env.NEXTAUTH_URL})
   }
 
   const onSubmit = async ({email, password}) => {
+    dispatch(showLoader())
     const status = await signIn("credentials", {
       redirect: false,
       email,
       password,
       callbackUrl: "/"
     })
+    dispatch(hideLoader())
 
     if (status.ok) {
       router.push(status.url)
@@ -51,6 +57,7 @@ export default function Login() {
 
   return (
     <IdentityLayout>
+      <OverlayLoader />
       <ToastContainer position="top-center" />
       <section className="mx-auto w-3/4 flex flex-col gap-10 rounded-md">
         <div>

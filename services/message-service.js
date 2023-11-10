@@ -14,3 +14,7 @@ export function showErrorMesssages(toast, t, errors) {
   </div>
   toast.error(errorMessage)
 }
+
+export function showErrorMesssage(toast, t, key, params) {
+  toast.error(t(key, params))
+}

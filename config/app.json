@@ -489,6 +489,14 @@
       "shortcut": "R"
     },
     {
+      "code": "LP",
+      "elixirCost": 3,
+      "type": "troop",
+      "rarity": "champion",
+      "isWinCondition": false,
+      "shortcut": "PRI"
+    },
+    {
       "code": "LJ",
       "elixirCost": 4,
       "type": "troop",

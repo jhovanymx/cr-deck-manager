@@ -34,10 +34,16 @@ export default function Dashboard () {
   }
 
   return (
-    <section className="p-2 rounded-md">
+    <section className="p-2 rounded-2xl">
       <div className="flex items-center justify-start space-x-2 rounded-md bg-white">
-        <Button icon={<FaObjectGroup />} text={t("dashboard.groupBy")} onButtonClick={onGroupByClick} />
-        <Button icon={<GrAddCircle />} text={t("dashboard.newDeck")} onButtonClick={onNewDeckClick} />
+        <Button
+          icon={<FaObjectGroup />}
+          text={t("dashboard.groupBy")}
+          onButtonClick={onGroupByClick} />
+        <Button
+          icon={<GrAddCircle />}
+          text={t("dashboard.newDeck")}
+          onButtonClick={onNewDeckClick} />
       </div>
       <DeckDialog isOpen={isOpenDeckDialog} setIsOpen={setIsOpenDeckDialog} />
       {isGroupView ? (

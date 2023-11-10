@@ -20,7 +20,7 @@ export default function Card ({ index, code, isSelected, isSelectable, isPlaceHo
 
   return (
     <div ref={dragRef} className="rounded-lg">
-      <div className={`rounded-md bg-gray-400 ${isSelected && 'animate-waving-hand'} cursor-pointer`} style={cardStyle} onClick={onClickCardHandler}>
+      <div className={`rounded-md ${isSelectable && "bg-gray-400"} ${isSelected && 'animate-waving-hand'} cursor-pointer`} style={cardStyle} onClick={onClickCardHandler}>
         { !isPlaceHolder && 
           <Image 
             className=""

@@ -11,7 +11,7 @@ export default function CurrentDeck () {
   }
 
   return (
-    <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
+    <div className="grid grid-cols-4 gap-2">
       {currentDeck.cards.map(card => (
         <Card
           key={card.index}
