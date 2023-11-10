@@ -1,9 +1,8 @@
-import { useQuery, gql } from '@apollo/client';
 import appConfig from 'config/app.json'
 
 const Test = () => {
   const shortcuts = appConfig.cards.map(card => {
-    const shortcut = card.shortcuts[0]
+    const shortcut = card.shortcut
     return shortcut !== card.code ? shortcut : card.code
   })
 
