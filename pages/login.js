@@ -14,8 +14,11 @@ import { loginValidate } from 'services/form-service'
 import { ToastContainer, toast } from 'react-toastify'
 import { authOptions } from 'pages/api/auth/[...nextauth]'
 import { showLoader, hideLoader } from 'redux/slices/app-slice'
+import { useTranslation } from "react-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 
 export default function Login() {
+  const { t } = useTranslation("common")
   const [showPassword, setShowPassword] = useState(false)
   const router = useRouter()
   const dispatch = useDispatch()
@@ -61,7 +64,7 @@ export default function Login() {
       <ToastContainer position="top-center" />
       <section className="mx-auto w-3/4 flex flex-col gap-10 rounded-md">
         <div>
-          <h1 className="text-3xl text-bold text-gray-900 py-3">Clash Royale Manager</h1>
+          <h1 className="text-3xl text-bold text-gray-900 py-3">CR Manager</h1>
           <span className="mx-auto w-3/4 text-xs text-gray-500">Edit easily your favorites decks. Store and manage your decks using labels and colors</span>
         </div>
         <form className="flex flex-col gap-5" onSubmit={formik.handleSubmit}>
@@ -81,7 +84,7 @@ export default function Login() {
             <input
               type={showPassword ? "text" : "password"}
               name="password"
-              placeholder="Password"
+              placeholder={t("login.password")}
               className={styles.input_text}
               {...formik.getFieldProps("password")}
             />
@@ -106,7 +109,7 @@ export default function Login() {
   );
 };
 
-export async function getServerSideProps({ req, res }) {
+export async function getServerSideProps({ req, res, locale }) {
   const session = await getServerSession(req, res, authOptions)
   if (session) {
     return {
@@ -117,5 +120,10 @@ export async function getServerSideProps({ req, res }) {
     }
   }
 
-  return {props: {}}
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, [
+        "common"
+    ]))
+  }}
 }

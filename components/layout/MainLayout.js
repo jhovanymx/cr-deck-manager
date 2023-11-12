@@ -1,14 +1,25 @@
 import { useState } from "react"
-import { HiOutlineMenu, HiOutlineSearch } from 'react-icons/hi'
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
+import { useTranslation } from "react-i18next"
+import { HiOutlineMenu, HiOutlineSearch, HiUser } from 'react-icons/hi'
 import Image from "next/image"
-import { signOut} from 'next-auth/react'
+import { signOut } from 'next-auth/react'
+import { showLoader } from 'redux/slices/app-slice'
 
 export default function MainLayout({ children }) {
+  const { t } = useTranslation()
   const [openNavbar, setOpenNavbar] = useState(true)
+  const [openUserMenu, setOpenUserMenu] = useState(false)
+  const dispatch = useDispatch()
   const labels = useSelector(state => state.app.labels)
 
   const stateClass = !openNavbar ? "opacity-0" : "opacity-100"
+  
+  const onClickLogout = (e) => {
+    e.preventDefault()
+    dispatch(showLoader())
+    signOut()
+  }
 
   return (
     <>
@@ -20,15 +31,38 @@ export default function MainLayout({ children }) {
             <HiOutlineMenu className="text-gray-900 w-full leading-none" />
           </div>
           <Image src="/images/logo.svg" width={10} height={10} alt="Github Image" className="w-8 h-8" />
-          <h1 className={`text-gray-900 text-sm origin-left font-medium duration-300 py-2`}> Clash Royale Manager</h1>
+          <h1 className={`text-gray-900 text-sm origin-left font-medium duration-300 py-2`}> CR Manager</h1>
         </div>
-        <div className="flex items-center rounded-2xl bg-sky-50 m-2 py-2 px-3 space-x-2">
+        <div className="flex flex-grow items-center rounded-2xl bg-sky-50 m-2 py-2 px-3 space-x-2">
           <HiOutlineSearch
             className="text-gray-500 cursor-pointer text-center w-6" />
           <input
             type="search"
             className={`bg-transparent text-gray-500 w-full origin-left focus:outline-none duration-300`}
             placeholder="Search" />
+        </div>
+        <div className="relative">
+          <div 
+            className="flex items-center justify-center mx-2 w-10 h-10 rounded-full cursor-pointer hover:bg-gray-200 duration-300" 
+            onClick={() => setOpenUserMenu(!openUserMenu)}>
+            <HiUser
+                className="relative block w-full h-6" />
+          </div>
+          { openUserMenu && 
+            <div
+              className="fixed inset-0 z-10 w-full h-full"
+              onClick={() => setOpenUserMenu(false)} />
+          }
+          { openUserMenu && 
+            <div className="absolute right-0 z-10 w-48 mt-2 overflow-hidden bg-white rounded-md shadow-xl">
+              <a 
+                href="" 
+                className="block px-4 py-2 text-sm text-gray-700"
+                onClick={onClickLogout} >
+                Logout
+              </a>
+            </div>
+          }
         </div>
       </header>
       <div className="flex">
@@ -44,7 +78,7 @@ export default function MainLayout({ children }) {
                     <span className={`duration-300 flex-1 ${stateClass}`}>{label.displayName}</span>
                 </div>
               ))
-            }import Image from "next/image"
+            }
           </div>
         </nav>
         <main>

@@ -118,6 +118,18 @@
     "onlyOneChampion": "Only one champion is allowed",
     "noDupes": "No dupes are allowed"
   },
+  "login": {
+    "email": "Email",
+    "password": "Password",
+    "login": "Login",
+    "signGithub": "Sign with GitHub"
+  },
+  "header": {
+    "search": "Search"
+  },
+  "navbar": {
+    "labels": "Labels"
+  },
   "dashboard": {
     "newDeck": "New Deck",
     "groupBy": "Group By"

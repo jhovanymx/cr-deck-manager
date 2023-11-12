@@ -118,6 +118,18 @@
     "onlyOneChampion": "Solo un campeón es permitido",
     "noDupes": "Se prohibe cartas duplicadas"
   },
+  "login": {
+    "email": "Email",
+    "password": "Contraseña",
+    "login": "Iniciar sesión",
+    "signGithub": "Iniciar sesión con GitHub"
+  },
+  "header": {
+    "search": "Buscar"
+  },
+  "navbar": {
+    "labels": "Etiquetas"
+  },
   "dashboard": {
     "newDeck": "Nuevo Mazo",
     "groupBy": "Agrupar Por"
