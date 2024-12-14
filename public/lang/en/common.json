@@ -111,28 +111,42 @@
     "Z": "Zap",
     "ZA": "Zappies"
   },
+  "common": {
+    "yes": "Yes",
+    "no": "No",
+    "comfirmAction": "Confirm action"
+  },
   "errors": {
     "check": "Check the following errors",
     "invalidCode": "Following card codes are invalid: {{codes}}",
     "deckLength": "Deck is conformed by 8 cards",
     "onlyOneChampion": "Only one champion is allowed",
-    "noDupes": "No dupes are allowed"
+    "noDupes": "No dupes are allowed",
+    "onAddDeck": "An error happened while adding deck",
+    "onDeleteDeck": "An error happened while removing deck"
   },
   "login": {
+    "description": "Edit easily your favorites decks. Store and manage your decks using labels and colors",
     "email": "Email",
     "password": "Password",
     "login": "Login",
-    "signGithub": "Sign with GitHub"
+    "signGithub": "Sign with GitHub",
+    "dontHaveAccount": "Don't have a account yet?",
+    "register": "Register"
   },
   "header": {
-    "search": "Search"
+    "search": "Search",
+    "logout": "Logout"
   },
   "navbar": {
     "labels": "Labels"
   },
   "dashboard": {
     "newDeck": "New Deck",
-    "groupBy": "Group By"
+    "groupBy": "Group By",
+    "edit": "Edit",
+    "remove": "Remove",
+    "rate": "Rate"
   },
   "deckDialog": {
     "newDeck": "New Deck",
@@ -142,5 +156,12 @@
     "add": "Add",
     "save": "Save",
     "close": "Close"
+  },
+  "deck": {
+    "label": {
+      "new": "New label",
+      "add": "Add"
+    },
+    "confirmDelete": "Are you sure to delete the deck?"
   }
 }

@@ -29,6 +29,16 @@ export const appSlice = createSlice({
     addDeck: (state, { payload }) => {
       state.decks.push(payload)
     },
+    updateDeck: (state, { payload }) => {
+      const deck = state.decks.filter(deck => deck.id = payload.id)
+      if (deck) {
+        deck.displayName = payload.displayName
+        deck.cards = payload.cards
+      }
+    },
+    deleteDeck: (state, { payload }) => {
+      state.decks = state.decks.filter(deck => deck.id != payload)
+    },
     setDecks: (state, { payload }) => {
       state.decks = payload
     },
@@ -77,7 +87,7 @@ export const appSlice = createSlice({
 })
 
 export const { 
-  setLabels, addDeck, setDecks, 
+  setLabels, addDeck, updateDeck, deleteDeck, setDecks, 
   setCurrentDeck, setDisplayNameCurrentDeck, setCardsCurrentDeck, selectCardCurrentDeck, setSelectedCardCurrentDeck, clearCurrentDeck,
   setGroup, setGroupView,
   showLoader, hideLoader

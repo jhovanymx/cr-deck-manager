@@ -111,6 +111,11 @@
     "Z": "Descarga",
     "ZA": "Electrocutadores"
   },
+  "common": {
+    "yes": "Sí",
+    "no": "No",
+    "comfirmAction": "Confirmar acción"
+  },
   "errors": {
     "check": "Verifique los siguientes errores",
     "invalidCode": "Los siguientes códigos de carta son inválidos: {{codes}}",
@@ -119,13 +124,17 @@
     "noDupes": "Se prohibe cartas duplicadas"
   },
   "login": {
+    "description": "Edita fácilmente tus mazos favoritos. Guarda y administra tus mazos usando etiquetas y colores",
     "email": "Email",
     "password": "Contraseña",
     "login": "Iniciar sesión",
-    "signGithub": "Iniciar sesión con GitHub"
+    "signGithub": "Iniciar sesión con GitHub",
+    "dontHaveAccount": "¿No tienes una cuenta aún?",
+    "register": "Registrarse"
   },
   "header": {
-    "search": "Buscar"
+    "search": "Buscar",
+    "logout": "Cerrar sesión"
   },
   "navbar": {
     "labels": "Etiquetas"
@@ -142,5 +151,12 @@
     "add": "Agregar",
     "save": "Guardar",
     "close": "Cerrar"
+  },
+  "deck": {
+    "label": {
+      "new": "Nueva etiqueta",
+      "add": "Agregar"
+    },
+    "confirmDelete": "¿Estás seguro de eliminar el deck?"
   }
 }

@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { FaObjectGroup } from 'react-icons/fa'
 import { GrAddCircle } from 'react-icons/gr'
 import { useTranslation } from 'next-i18next'
-import { useGetDecksByUsernameQuery } from "api/deck-api"
+import { useGetDecksByUserIdQuery } from "api/deck-api"
 import { setDecks } from 'redux/slices/app-slice'
 import Button from 'components/common/Button'
 import DeckDialog from 'components/DeckDialog'
@@ -17,9 +17,9 @@ export default function Dashboard () {
   const [isOpenDeckDialog, setIsOpenDeckDialog] = useState(false)
   const dispatch = useDispatch()
 
-  const {data: decksByUsername, isFetching: isDecksFetching } = useGetDecksByUsernameQuery(user.email)
-
+  const {data: decksByUsername, isFetching: isDecksFetching } = useGetDecksByUserIdQuery(user.id)
   useEffect(() => {
+    console.log("decksByUsername", decksByUsername)
     if (decksByUsername && !isDecksFetching) {
       dispatch(setDecks(decksByUsername))
     }
@@ -50,10 +50,10 @@ export default function Dashboard () {
         isDecksFetching ? (
           <div>Loading...</div>
         ) : (
-          <GroupsView />
+          <GroupsView setIsOpenDeckDialog={setIsOpenDeckDialog} />
         )
       ) : (
-        <DecksView />
+        <DecksView setIsOpenDeckDialog={setIsOpenDeckDialog}/>
       )}
     </section>
   )

@@ -4,7 +4,7 @@ import { setLabels } from 'redux/slices/app-slice'
 import { useDispatch } from 'react-redux'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { authOptions } from 'pages/api/auth/[...nextauth]'
-import { getLabelsByUsername, getUserByUsername } from 'graphql/queries'
+import { getUserByUsername, getLabelsByUserId } from 'repositories/fauna-repository'
 import MainLayout from 'components/layout/MainLayout'
 import Dashboard from 'components/Dashboard'
 import OverlayLoader from 'components/OverlayLoader'
@@ -32,25 +32,23 @@ export async function getServerSideProps({ req, res, locale }) {
       }
     }
   }
-  
-  const labels = await getLabelsByUsername(session.user.email)
-  const userData = await getUserByUsername(session.user.email)
 
-  if (userData.data?.userByUsername) {
-    const userInfo = userData.data.userByUsername
-    session.user = {
+  const result = {
+    ...(await serverSideTranslations(locale, [
+      "common"
+    ]))
+  }
+  
+  const userInfo = await getUserByUsername(session.user.email)
+  if (userInfo) {
+    result.labels = await getLabelsByUserId(userInfo.id)
+    result.user = {
       ...session.user,
       ...userInfo
     }
   }
 
   return {
-    props: {
-      ...(await serverSideTranslations(locale, [
-        "common"
-      ])),
-      user: session.user,
-      labels: labels.data.labelsByUsername.data
-    }
+    props: result
   }
 }

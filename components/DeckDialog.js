@@ -1,48 +1,33 @@
-import { useRef, Fragment } from 'react'
+import { Fragment } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Dialog, Transition  } from '@headlessui/react'
-import { BiRename, HiFingerPrint } from 'react-icons/bi'
+import { BiRename } from 'react-icons/bi'
 import { MdQrCode } from 'react-icons/md'
 import { ToastContainer, toast } from 'react-toastify'
-import { useTranslation } from "react-i18next"
+import { useTranslation } from "next-i18next"
 import 'react-toastify/dist/ReactToastify.css'
 import Card from 'components/Card'
 import CurrentDeck from 'components/CurrentDeck'
 import Button from 'components/common/Button'
 import styles from 'styles/Form.module.css'
 import appConfig from 'config/app.json'
-import { setDisplayNameCurrentDeck, setCardsCurrentDeck, setSelectedCardCurrentDeck, clearCurrentDeck, showLoader, hideLoader } from 'redux/slices/app-slice'
+import { addDeck, updateDeck, setDisplayNameCurrentDeck, setCardsCurrentDeck, setSelectedCardCurrentDeck, clearCurrentDeck, showLoader, hideLoader } from 'redux/slices/app-slice'
 import { parseCardsCode, validateInsertionToDeck } from 'services/card-service'
-import { useAddDeckMutation } from 'api/deck-api'
+import { useAddDeckMutation, useUpdateDeckMutation } from 'api/deck-api'
 import { showErrorMesssages, showErrorMesssage } from 'services/message-service'
 
 export default function DeckDialog({ isOpen, setIsOpen, isEdit = false, deck }) {
   const { cards: cardList} = appConfig
   const { t } = useTranslation()
-  const [addDeck] = useAddDeckMutation()
+  const [addDeckMutation] = useAddDeckMutation()
+  const [updateDeckMutation] = useUpdateDeckMutation()
   const user = useSelector(state => state.user.user)
   const currentDeck = useSelector(state => state.app.currentDeck)
   const config = useSelector(state => state.app.config)
   const dispatch = useDispatch()
 
-  const timerCardsCode = useRef(false)
-
-  const onKeyUpCardsCode = e => {
-    if (timerCardsCode.current !== false) {
-      clearTimeout(timerCardsCode.current)
-    }
-    timerCardsCode.current = setTimeout(function(){
-      timerCardsCode.current = false;
-      processCardCode(e.target.value)
-    }, 300);
-  }
-
   const onChangeCardsCode = e => {
-    processCardCode(e.target.value.trim())
-  }
-
-  const processCardCode = cardsCode => {
-    const result = parseCardsCode(cardsCode, config)
+    const result = parseCardsCode(e.target.value.trim().toUpperCase(), config)
     if (result.errors.length > 0) {
       showErrorMesssages(toast, t, result.errors)
       return
@@ -51,10 +36,9 @@ export default function DeckDialog({ isOpen, setIsOpen, isEdit = false, deck }) 
     dispatch(setCardsCurrentDeck(result.cards))
   }
 
-  const onClickSaveAddButton = () => {
+  const onClickSaveAdd = () => {
     const deck = {
-      username: user.email,
-      userId: user._id,
+      userId: user.id,
       displayName: currentDeck.displayName,
       cards: currentDeck.cards.map((card) => ({
         code: card.code, 
@@ -62,18 +46,46 @@ export default function DeckDialog({ isOpen, setIsOpen, isEdit = false, deck }) 
       }))
     }
     dispatch(showLoader())
-    addDeck(deck).unwrap()
-      .then(() => onAddDeckCompleted())
+    if (isEdit) {
+      updateDeckMutation(deck).unwrap()
+      .then(() => {
+        onUpdateDeckCompleted(deck)
+      })
+      .catch(() => onUpdateDeckError())
+      return
+    }
+    addDeckMutation(deck).unwrap()
+      .then((addedDeck) => {
+        deck.id = addedDeck.id
+        onAddDeckCompleted(deck)
+      })
       .catch(() => onAddDeckError())
   }
 
-  const onAddDeckCompleted = () => {
-    dispatch(hideLoader())
+  const onClickClose = () => {
     setIsOpen(false)
     dispatch(clearCurrentDeck())
   }
 
+  const onAddDeckCompleted = (deck) => {
+    dispatch(hideLoader())
+    setIsOpen(false)
+    dispatch(clearCurrentDeck())
+    dispatch(addDeck(deck))
+  }
+
+  const onUpdateDeckCompleted = (deck) => {
+    dispatch(hideLoader())
+    setIsOpen(false)
+    dispatch(clearCurrentDeck())
+    dispatch(updateDeck(deck))
+  }
+
   const onAddDeckError = () => {
+    dispatch(hideLoader())
+  }
+
+  const onUpdateDeckError = () => {
     dispatch(hideLoader())
   }
 
@@ -126,7 +138,7 @@ export default function DeckDialog({ isOpen, setIsOpen, isEdit = false, deck }) 
                     name="deckName"
                     placeholder={t("deckDialog.deckName")}
                     className={styles.input_text}
-                    value={deck?.displayName}
+                    value={currentDeck.displayName}
                     onChange={(e) => dispatch(setDisplayNameCurrentDeck(e.target.value))}
                   />
                   <span className="flex items-center px-4">
@@ -142,7 +154,6 @@ export default function DeckDialog({ isOpen, setIsOpen, isEdit = false, deck }) 
                       name="cardsCodes"
                       placeholder={t("deckDialog.cardsCode")}
                       className={styles.input_text}
-                      value={deck?.displayName}
                       onChange={onChangeCardsCode}
                     />
                     <span className="flex items-center px-4">
@@ -161,8 +172,8 @@ export default function DeckDialog({ isOpen, setIsOpen, isEdit = false, deck }) 
                   }
                 </div>
                 <div className="mt-4 space-x-2 text-right">
-                  <Button text={t(`deckDialog.${isEdit ? "save" : "add"}`)} onButtonClick={() => onClickSaveAddButton()} />
-                  <Button text={t("deckDialog.close")} onButtonClick={() => setIsOpen(false)} />
+                  <Button text={t(`deckDialog.${isEdit ? "save" : "add"}`)} onButtonClick={onClickSaveAdd} />
+                  <Button text={t("deckDialog.close")} onButtonClick={onClickClose} />
                 </div>
               </Dialog.Panel>
             </Transition.Child>

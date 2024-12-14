@@ -1,10 +1,11 @@
 import { useState } from "react"
 import { useSelector, useDispatch } from "react-redux"
-import { useTranslation } from "react-i18next"
-import { HiOutlineMenu, HiOutlineSearch, HiUser } from 'react-icons/hi'
-import Image from "next/image"
+import { useTranslation } from "next-i18next"
 import { signOut } from 'next-auth/react'
 import { showLoader } from 'redux/slices/app-slice'
+import { HiOutlineMenu, HiOutlineSearch, HiUser } from 'react-icons/hi'
+import { MdLabelImportant } from "react-icons/md"
+import Image from "next/image"
 
 export default function MainLayout({ children }) {
   const { t } = useTranslation()
@@ -31,7 +32,7 @@ export default function MainLayout({ children }) {
             <HiOutlineMenu className="text-gray-900 w-full leading-none" />
           </div>
           <Image src="/images/logo.svg" width={10} height={10} alt="Github Image" className="w-8 h-8" />
-          <h1 className={`text-gray-900 text-sm origin-left font-medium duration-300 py-2`}> CR Manager</h1>
+          <h1 className={`text-gray-900 text-sm origin-left font-medium duration-300 py-2`}>CR Manager</h1>
         </div>
         <div className="flex flex-grow items-center rounded-2xl bg-sky-50 m-2 py-2 px-3 space-x-2">
           <HiOutlineSearch
@@ -39,7 +40,7 @@ export default function MainLayout({ children }) {
           <input
             type="search"
             className={`bg-transparent text-gray-500 w-full origin-left focus:outline-none duration-300`}
-            placeholder="Search" />
+            placeholder={t("header.search")} />
         </div>
         <div className="relative">
           <div 
@@ -59,7 +60,7 @@ export default function MainLayout({ children }) {
                 href="" 
                 className="block px-4 py-2 text-sm text-gray-700"
                 onClick={onClickLogout} >
-                Logout
+                {t("header.logout")}
               </a>
             </div>
           }
@@ -68,13 +69,13 @@ export default function MainLayout({ children }) {
       <div className="flex">
         <nav className="flex h-screen">
           <div className={`bg-gray-100 p-3 duration-300 ${openNavbar ? "w-40" : "w-10"}`}>
-            <div className={`uppercase text-gray-500 text-sm mb-2 ${stateClass}`}>Labels</div>
+            <div className={`uppercase text-gray-500 text-sm mb-2 ${stateClass}`}>{t("navbar.labels")}</div>
             {
               labels.map((label) => (
                 <div 
                   key={label.displayName} 
                   className="flex items-center space-x-2 mb-2">
-                    <span className="w-4 h-4 bg-blue-400 flex-none" style={label.color && {backgroundColor: label.color}}></span>
+                    <MdLabelImportant className="w-4 h-4 text-blue-400 flex-none" style={label.color && {color: label.color}}></MdLabelImportant>
                     <span className={`duration-300 flex-1 ${stateClass}`}>{label.displayName}</span>
                 </div>
               ))
